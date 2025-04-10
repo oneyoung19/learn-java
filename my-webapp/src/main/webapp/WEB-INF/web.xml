@@ -4,4 +4,18 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <!-- JSP乱码问题 https://www.xiaogd.net/md/jsp-charset-encoding-and-mojibake-issue -->
+  <welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<!-- 指定 jsp 文件的编码 -->
+  <!-- 不管用 只能手动声明 -->
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<page-encoding>utf-8</page-encoding>
+		</jsp-property-group>
+	</jsp-config>
 </web-app>
